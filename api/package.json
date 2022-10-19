@@ -1,7 +1,7 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Aplicación para portafolio",
   "main": "index.js",
   "scripts": {
     "start": "nodemon -L",
@@ -26,6 +26,7 @@
     "superagent": "^8.0.0"
   },
   "devDependencies": {
+    "@types/node": "^18.11.2",
     "chai": "^4.3.6",
     "mocha": "^8.4.0",
     "nodemon": "^2.0.20",
