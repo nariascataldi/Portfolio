@@ -1,17 +1,52 @@
 const server = require('./src/app.js');
-const { conn } = require('./src/db.js');
-const pushMail = require('./src/utils/preload/pushMail');
-const pushUser = require('./src/utils/preload/pushUser');
-const pushProyect = require('./src/utils/preload/pushProyect');
-
+const { conn, User, Mail, Proyect } = require('./src/db.js');
 const PORT = 3001;
-// Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
-  pushUser();
-  pushMail();
-  pushProyect();
 
-  server.listen(PORT, () => {
-    console.log(`Listening at ${PORT}`); // eslint-disable-line no-console
-  });
-});
+const jsonUser = require('./src/utils/Data/user.json');
+const jsonMail = require('./src/utils/Data/mail.json');
+const jsonProyect = require('./src/utils/Data/proyect.json');
+const pushUser = () => {
+  try {
+    jsonUser.users.forEach(obj => {
+      User.create(obj)
+    })
+    console.log('Usuarios cargados');
+  } catch (error) {
+    console.log('No se cargaron los usuarios')
+  }
+}
+const pushMail = () => {
+  try {
+    jsonMail.mails.forEach(obj => {
+      Mail.create(obj)
+    })
+    console.log('Mails cargados');
+  } catch (error) {
+    console.log('No se cargaron los mails')
+  }
+}
+const pushProyect = () => {
+  try {
+    jsonProyect.proyects.forEach(obj => {
+      Proyect.create(obj)
+    })
+    console.log('Proyectos cargados');
+  } catch (error) {
+    console.log('No se cargaron los proyectos')
+  }
+}
+
+
+// Syncing all the models at once.
+(async () => {
+
+  await conn.sync({ force: true }).then(() => {
+    pushUser();
+    pushMail();
+    pushProyect();
+
+    server.listen(PORT, () => {
+      console.log(`Listening at ${PORT}`); // eslint-disable-line no-console
+    });
+  })
+})();

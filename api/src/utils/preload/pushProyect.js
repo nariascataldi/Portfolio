@@ -5,7 +5,7 @@ function pushProyect() {
     try {
         for (let proy in jsonProyect) {
             jsonProyect[proy].forEach(obj => {
-                Proyect.create(obj)
+                Proyect.bulkCreate(obj)
             })
         }
     } catch (error) {

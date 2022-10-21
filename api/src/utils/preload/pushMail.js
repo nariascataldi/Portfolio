@@ -5,7 +5,7 @@ function pushMail() {
     try {
         for (let mail in jsonMail) {
             jsonMail[mail].forEach(obj => {
-                Mail.create(obj)
+                Mail.bulkCreate(obj)
             })
         }
     } catch (error) {

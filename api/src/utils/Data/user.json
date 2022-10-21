@@ -6,6 +6,13 @@
       "status": "Admin",
       "isActive": true,
       "company": ""
+    },
+    {
+      "name": "Juan",
+      "lastName": "Arias Cataldi",
+      "status": "Admin",
+      "isActive": true,
+      "company": ""
     }
   ]
 }

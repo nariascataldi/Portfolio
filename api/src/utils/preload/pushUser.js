@@ -3,11 +3,13 @@ const jsonUser = require('../Data/user.json');
 
 function pushUser() {
     try {
-        for (let user in jsonUser) {
-            jsonUser[user].forEach(obj => {
-                User.create(obj)
+        for (let users in jsonUser) {
+            console.log(jsonUser[users]);
+            jsonUser[users].forEach(obj => {
+                User.bulkCreate(obj)
             })
         }
+        console.log('Usuarios cargados');
     } catch (error) {
         console.log('No se cargaron los usuarios')
     }
