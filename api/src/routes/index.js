@@ -1,5 +1,4 @@
 const { Router } = require('express');
-const { User, Proyect, Mail } = require('../db');
 const getUser = require('../utils/User/getUser');
 const getProyects = require('../utils/Proyect/getProyect');
 const getMails = require('../utils/Mail/getMail');
@@ -11,7 +10,7 @@ const router = Router();
 // Ejemplo: router.use('/auth', authRouter);
 router.get('/', (req, res) => {
   try {
-    res.send('Prueba de que todo irá bien 🙂')
+    res.send('💼 Néstor Arias Cataldi 🙂')
   } catch (error) {
     console.log('api, error en la ruta get');
     next(error);
