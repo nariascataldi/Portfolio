@@ -3,14 +3,14 @@
     {
       "name": "Néstor",
       "lastName": "Arias Cataldi",
-      "status": "Admin",
+      "status": 1,
       "isActive": true,
       "company": ""
     },
     {
-      "name": "Juan",
-      "lastName": "Arias Cataldi",
-      "status": "Admin",
+      "name": "Juan Ignacio",
+      "lastName": "Escudero",
+      "status": 2,
       "isActive": true,
       "company": ""
     }
