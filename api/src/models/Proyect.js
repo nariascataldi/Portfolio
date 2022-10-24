@@ -12,11 +12,14 @@ module.exports = (sequelize) => {
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
     },
     date: {
       type: DataTypes.STRING,
       allowNull: true,
+      // validate:{
+      //   isDate: true,
+      // }
     },
     isActive: {
       type: DataTypes.BOOLEAN,
@@ -29,6 +32,11 @@ module.exports = (sequelize) => {
     url: {
       type: DataTypes.STRING,
       allowNull: true,
+      // validate:{
+      //   isUrl:{
+      //     msg: "Must be a valid url address likes: (https://foo.com)" 
+      //   }
+      // }
     },
     video: {
       type: DataTypes.STRING,
