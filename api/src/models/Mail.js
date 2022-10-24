@@ -13,6 +13,9 @@ module.exports = (sequelize) => {
     mail: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        isEmail: { msg: "Must be a valid email address" },
+      }
     },
     pass: {
       type: DataTypes.STRING,
@@ -21,10 +24,20 @@ module.exports = (sequelize) => {
     image: {
       type: DataTypes.STRING,
       allowNull: true,
+      // validate:{
+      //   isUrl:true
+      // },
+      defaultValue: "https://www.clipartmax.com/png/middle/330-3309899_argentina-rugby-union-logo.png"
     },
     picture: {
       type: DataTypes.STRING,
       allowNull: true,
+      // validate:{
+      //   isUrl:{
+      //     msg: "Must be a valid url address likes: (https://foo.com)" 
+      //   }
+      // },
+      defaultValue: "https://www.clipartmax.com/png/middle/330-3309899_argentina-rugby-union-logo.png"
     },
   });
 };

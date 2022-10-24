@@ -1,10 +1,8 @@
 {
-  "mails":[
+  "mails": [
     {
-     "mail":"nestorariascataldi@gmail.com",
-     "pass":"30221985NAC",
-     "image":"",
-     "picture":"" 
+      "mail": "nestorariascataldi@gmail.com",
+      "pass": "30221985NAC"
     }
   ]
 }
