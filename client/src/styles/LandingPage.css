@@ -1,24 +1,36 @@
+.backgroundLand {
+  background-color: darkslategray;
+}
 
-.maquina {
-  width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  /* font-size: 2rem; */
-  margin: 0 auto;
-  font-family: "Courier New";
-  border-right: 0.15em solid #18bdec;
-  animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+.html {
+  color: aqua;
+  text-align: left;
 }
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+
+.css {
+  color: red;
+  text-align: left;
 }
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+
+.col2 {
+  width: 10vw;
+}
+
+.htmlCont,
+.cssCont {
+  background-color: black;
+  border-radius: 10px;
+  color: azure;
+  width: 35vw;
+  height: 50vh;
+}
+
+.table {
+  padding: 10% 10% 90% 10%;
+  height: 100vh;
+  width: 100vw;
+}
+
+.tableBody {
+  vertical-align: initial;
 }
