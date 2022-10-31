@@ -46,7 +46,7 @@ const pushProyect = () => {
     pushProyect();
 
     server.listen(PORT, () => {
-      console.log(`Listening at ${PORT}`); // eslint-disable-line no-console
+      console.log(`Listening at ${PORT} `); // eslint-disable-line no-console
     });
   })
 })();
