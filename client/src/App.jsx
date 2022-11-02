@@ -8,6 +8,8 @@ import LandingPage from "./components/LandingPage";
 import Home from "./components/NavScroll";
 import Task from "./components/Task";
 import TasksForm from "./components/TasksForm";
+import ProyectList from "./components/ProyectList";
+import { ParticlesContainer } from "./components/Particles";
 
 function App() {
   return (
@@ -20,7 +22,11 @@ function App() {
           <Route path='/task' element={<Task />} />
           <Route path='/create_task' element={<TasksForm />} />
           <Route path='/edit_task/:id' element={<TasksForm />} />
+          <Route path='/proyect' element={<ProyectList />} />
+          <Route path='/particles' element={<ParticlesContainer />} />
+
         </Routes>
+        
       </Provider>
     </BrowserRouter>
   );
