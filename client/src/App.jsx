@@ -10,6 +10,8 @@ import TasksForm from "./components/TasksForm";
 import ProyectList from "./components/ProyectList";
 import { ParticlesContainer } from "./components/Particles";
 import { ParallaxCat } from "./components/Parallax";
+import { NotFound } from "./components/NotFound";
+
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path='/proyect' element={<ProyectList />} />
           <Route path='/particles' element={<ParticlesContainer />} />
           <Route path='/parallax' element={<ParallaxCat />} />
+          <Route path="*" element={<NotFound />} />
+
 
         </Routes>
         
