@@ -7,6 +7,7 @@ import { ParticlesContainer } from './Particles';
 
 
 
+
 function LandingPage() {
   const navigate = useNavigate();
   const notify = () => {

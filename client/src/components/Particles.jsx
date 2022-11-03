@@ -21,7 +21,7 @@ export const ParticlesContainer = (props) => {
       fullScreen: {
         zIndex: -1,
       },
-      fpsLimit: 50,
+      fpsLimit: 20,
       interactivity: {
         events: {
           onClick: {
@@ -66,7 +66,7 @@ export const ParticlesContainer = (props) => {
             default: "bounce",
           },
           random: false,
-          speed: 15,
+          speed: 5,
           straight: false,
         },
         number: {

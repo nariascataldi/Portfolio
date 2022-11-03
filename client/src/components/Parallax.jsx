@@ -5,23 +5,25 @@ import cat from '../assets/image/cat/cat.gif';
 import '../styles/Parallax.css'
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import LandingPage from './LandingPage';
 
 export const ParallaxCat = () => {
   const ref = useRef();
 
   return (
     <div className='bodyP'>
-      <Parallax pages={4} ref={ref} style={{backgroundColor: 'black'}}>
-        {/* <ParallaxLayer speed={1}>
-            <h2>Welcome to my website</h2>
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1} speed={0.5}>
-            <h2>Web development is fun!</h2>
-        </ParallaxLayer> */}
-
+      <Parallax pages={5} ref={ref} style={{ backgroundColor: 'black' }}>
+        {/* LandingPage */}
         <ParallaxLayer
           offset={0}
+          speed={1}
+          factor={2}
+        >
+          <LandingPage />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={1}
           speed={1}
           factor={2}
           style={{
@@ -31,7 +33,7 @@ export const ParallaxCat = () => {
         />
 
         <ParallaxLayer
-          offset={2}
+          offset={3}
           speed={1}
           factor={4}
           style={{
@@ -41,14 +43,14 @@ export const ParallaxCat = () => {
         ></ParallaxLayer>
 
         <ParallaxLayer
-          sticky={{ start: 0.9, end: 2.5 }}
+          sticky={{ start: 1.5, end: 4 }}
           style={{ textAlign: 'center' }}
         >
           <img className='imgP' src={cat} />
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={0.2}
+          offset={1.2}
           speed={0.05}
           onClick={() => ref.current.scrollTo(3)}
         >
@@ -56,7 +58,7 @@ export const ParallaxCat = () => {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3}
+          offset={4}
           speed={2}
           onClick={() => ref.current.scrollTo(0)}
         >
