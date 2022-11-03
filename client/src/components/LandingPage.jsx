@@ -30,7 +30,7 @@ function LandingPage() {
     setTimeout(() => {
       // navigate('/home')
     }, 3000);
-  }
+}
   return (
     <>
       <ParticlesContainer id="tsparticles" />

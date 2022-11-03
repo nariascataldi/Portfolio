@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from './app/store';
@@ -10,6 +9,7 @@ import Task from "./components/Task";
 import TasksForm from "./components/TasksForm";
 import ProyectList from "./components/ProyectList";
 import { ParticlesContainer } from "./components/Particles";
+import { ParallaxCat } from "./components/Parallax";
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
           <Route path='/edit_task/:id' element={<TasksForm />} />
           <Route path='/proyect' element={<ProyectList />} />
           <Route path='/particles' element={<ParticlesContainer />} />
+          <Route path='/parallax' element={<ParallaxCat />} />
 
         </Routes>
         
