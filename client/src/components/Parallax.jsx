@@ -11,7 +11,7 @@ export const ParallaxCat = () => {
 
   return (
     <div className='bodyP'>
-      <Parallax pages={4} ref={ref} style={{background: 'black'}}>
+      <Parallax pages={4} ref={ref} style={{backgroundColor: 'black'}}>
         {/* <ParallaxLayer speed={1}>
             <h2>Welcome to my website</h2>
         </ParallaxLayer>
