@@ -7,6 +7,9 @@ import '../styles/Parallax.css'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import LandingPage from './LandingPage';
 
+
+
+
 export const ParallaxCat = () => {
   const ref = useRef();
 
@@ -46,13 +49,13 @@ export const ParallaxCat = () => {
           sticky={{ start: 1.5, end: 4 }}
           style={{ textAlign: 'center' }}
         >
-          <img className='imgP' src={cat} />
+          <img className='imgP' src={cat} alt='gato con paracaidas' />
         </ParallaxLayer>
 
         <ParallaxLayer
           offset={1.2}
           speed={0.05}
-          onClick={() => ref.current.scrollTo(3)}
+          onClick={() => ref.current.scrollTo(4)}
         >
           <h2 className='h2P'>Welcome to my website</h2>
         </ParallaxLayer>
@@ -60,9 +63,9 @@ export const ParallaxCat = () => {
         <ParallaxLayer
           offset={4}
           speed={2}
-          onClick={() => ref.current.scrollTo(0)}
+          onClick={() => ref.current.scrollTo(1)}
         >
-          <h2 className='h2P'>Gracias!</h2>
+          <h2 className='h2P'>¡Gracias totales!</h2>
         </ParallaxLayer>
       </Parallax>
     </div>

@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 import Typewriter from 'typewriter-effect';
 import { ToastContainer, toast } from 'react-toastify';
 import '../styles/LandingPage.css';
@@ -9,29 +9,15 @@ import { ParticlesContainer } from './Particles';
 
 
 function LandingPage() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
+  
+  const toastId = React.useRef(null);
   const notify = () => {
-    toast(() => {
-      return (
-        <>
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter
-                .pauseFor(500)
-                .changeDelay(75)
-                .typeString('start ')
-                .start()
-                ;
-            }}
-          />
-        </>
-      )
+    if(! toast.isActive(toastId.current)) {
+      toastId.current = toast("scroll");
     }
-    );
-    setTimeout(() => {
-      // navigate('/home')
-    }, 3000);
-}
+  }
+
   return (
     <>
       <ParticlesContainer id="tsparticles" />

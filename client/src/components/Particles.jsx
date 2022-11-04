@@ -8,7 +8,7 @@ export const ParticlesContainer = (props) => {
   }, []);
 
   const particlesLoaded = useCallback(async container => {
-    await console.log(container);
+    await container;
   }, []);
 
   const options = useMemo(() => {
@@ -96,6 +96,7 @@ export const ParticlesContainer = (props) => {
       id={props.id}
       init={particlesInit}
       options={options}
+      loaded={particlesLoaded}
     />
   );
 };
