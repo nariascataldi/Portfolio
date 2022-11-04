@@ -62,7 +62,7 @@ export const ParallaxCat = () => {
           speed={2}
           onClick={() => ref.current.scrollTo(0)}
         >
-          <h2 className='h2P'>Hi Mom!</h2>
+          <h2 className='h2P'>Gracias!</h2>
         </ParallaxLayer>
       </Parallax>
     </div>
