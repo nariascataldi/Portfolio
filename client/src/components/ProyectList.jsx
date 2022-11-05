@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProyects } from "../app/actions";
 import { ParticlesContainer } from "./Particles";
@@ -16,7 +16,7 @@ export default function ProyectList() {
 
   return (
     <>
-      <ParticlesContainer id="tsparticles"/>
+      <ParticlesContainer id="tsparticles" />
       <header>
         <h1>
           Hola
