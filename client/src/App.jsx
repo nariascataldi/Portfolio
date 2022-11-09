@@ -10,6 +10,7 @@ import ProyectList from "./components/ProyectList";
 import { ParticlesContainer } from "./components/Particles";
 import { ParallaxCat } from "./components/Parallax";
 import { NotFound } from "./components/NotFound";
+import { ParallaxA } from "./components/ParallaxA";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path='/proyect' element={<ProyectList />} />
           <Route path='/particles' element={<ParticlesContainer />} />
           <Route path='/parallax' element={<ParallaxCat />} />
+          <Route path='/parallaxA' element={<ParallaxA />} />
           <Route path="*" element={<NotFound />} />
 
 
