@@ -10,7 +10,8 @@ import ProyectList from "./components/ProyectList";
 import { ParticlesContainer } from "./components/Particles";
 import { ParallaxCat } from "./components/Parallax";
 import { NotFound } from "./components/NotFound";
-import { ParallaxA } from "./components/ParallaxA";
+import { ParallaxA } from "./components/Parallax/ParallaxA";
+import { Arduino01 } from "./components/Parallax/01Arduino";
 
 
 function App() {
@@ -27,7 +28,12 @@ function App() {
           <Route path='/particles' element={<ParticlesContainer />} />
           <Route path='/parallax' element={<ParallaxCat />} />
           <Route path='/parallaxA' element={<ParallaxA />} />
+          {/* Parallax para borrar */}
+          <Route path='/arduino' element={<Arduino01 />} />
+
+          {/* --------------------- */}
           <Route path="*" element={<NotFound />} />
+
 
 
         </Routes>

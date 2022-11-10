@@ -1,0 +1,72 @@
+import { useRef } from 'react';
+import quebrada from '../../assets/image/parallax/Paisaje-Quebrada-de-Cafayate-a-Salta-Argentina-4.jpg';
+import coete01 from '../../assets/image/parallax/coete01.png';
+import arduinoide from '../../assets/sking/arduinoide.png';
+
+
+import '../../styles/Parallax.css'
+
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+
+
+export const Arduino01 = () => {
+  const ref = useRef();
+
+  return (
+    <div className='bodyP'>
+      <Parallax pages={2} ref={ref} style={{ backgroundColor: 'black' }} horizontal={false}>
+        {/* Arduino */}
+        <ParallaxLayer
+          // offset={0}
+          sticky={{ start: 0, end: 0.5 }}
+          speed={0} factor={1} style={{ backgroundImage: `url(${quebrada})`, backgroundPosition: '50% 0%', backgroundSize: '100vw', backgroundRepeat: 'no-repeat', width: '100vw' }} />
+        <ParallaxLayer
+          // offset={0}
+          sticky={{ start: 0.05, end: 0.5 }}
+          speed={0.5}
+          factor={1}
+          style={{ backgroundImage: `url(${coete01})`, backgroundPosition: '50% 0%', backgroundSize: '100vw', backgroundRepeat: 'no-repeat', width: '100vw' }}
+        />
+        <ParallaxLayer
+          sticky={{ start: 0.1, end: 0.5 }}
+          speed={3}
+          factor={0}
+          onClick={() => ref.current.scrollTo(0)}
+          style={{
+            textAlign: 'center',
+          }}
+        >
+          <h2 className='h2P'>Arduino</h2>
+        </ParallaxLayer>
+        <ParallaxLayer
+          sticky={{ start: 0.1, end: 0.5 }}
+          speed={2}
+          factor={0}
+          onClick={() => ref.current.scrollTo(0)}
+          style={{
+            padding: '0 0 0 2vw',
+          }}
+        >
+          <img width={'50vh'} src={arduinoide} alt='sking of arduino' />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={0.3}
+          speed={0}
+          factor={1}
+          // onClick={() => ref.current.scrollTo(0)}
+          style={{
+            color: 'white',
+            padding: '0 3%',
+          }}
+        >
+          <p>Querida comunidad:</p>
+          <p>El mundo IT siempre estuvo presente en mi vida, y este se había convertido en mi hobby. Tal fue el caso que viendo un video en TEDx, descubro arduino.</p>
+          <p>El primer arduino lo regale a mis sobrinos. Y me dije, en algun momento también podré usar uno. Luego llegó el día y compré el kit de arduino pero los deberes de padre motivaron a que lo tenga guardado.</p>
+          <p>La Pandemia</p>
+          <p>El encierro me obligo a poder pasar más tiempo con mis hijos y entre juegos veo la oportunidad para quitar el polvo a la placa y poder escribir código. Viendo unos tutoriales de Bitwise Ar di mis primeros pasos a maravillosos proyectos.</p>
+        </ParallaxLayer>
+      </Parallax>
+    </div>
+  );
+}
