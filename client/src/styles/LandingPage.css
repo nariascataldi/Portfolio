@@ -40,8 +40,7 @@
 .tableBody {
   vertical-align: initial;
 }
-
-/* Pantallas de menos de 600px de ancho */
+/* Pantallas de menos de 500px de ancho */
 @media screen and (max-width: 500px) {
   .container {
     display: flex;

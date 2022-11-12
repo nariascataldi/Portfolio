@@ -12,6 +12,7 @@ import { ParallaxCat } from "./components/Parallax";
 import { NotFound } from "./components/NotFound";
 import { ParallaxA } from "./components/Parallax/ParallaxA";
 import { Arduino01 } from "./components/Parallax/01Arduino";
+import { Grasshoper02 } from "./components/Parallax/02Grasshopper";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='/parallaxA' element={<ParallaxA />} />
           {/* Parallax para borrar */}
           <Route path='/arduino' element={<Arduino01 />} />
+          <Route path='/grasshoper' element={<Grasshoper02 />} />
 
           {/* --------------------- */}
           <Route path="*" element={<NotFound />} />
