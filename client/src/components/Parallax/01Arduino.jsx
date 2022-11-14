@@ -11,7 +11,6 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 export const Arduino01 = () => {
   const ref = useRef();
   var w = window.innerWidth;
-console.log(w)
 
   return (
     <div className='bodyP'>
@@ -19,7 +18,7 @@ console.log(w)
         backgroundColor: 'black'
       }} horizontal={false}>
         {/* Arduino */}
-        
+
 
         <ParallaxLayer
           offset={0}
@@ -27,14 +26,20 @@ console.log(w)
             color: 'white',
           }}
         >
-          <p className='pgraf' data-author={w} >Querida comunidad:</p>
-          <p className='pgraf'>El mundo IT siempre estuvo presente en mi vida, y este se había convertido en mi hobby. Tal fue el caso que viendo un video en TEDx, descubro arduino.</p>
+          <div className='boxtv' style={{ 'left': `calc(${w??w}px - (${w??w}px - (${w??w}px * (123/250))  + 218px))` }}>
+
+            <p className='pgraf' data_author={`${w}px`} >Querida comunidad:</p>
+            <p className='pgraf'>El mundo IT siempre estuvo presente en mi vida, y este se había convertido en mi hobby. Tal fue el caso que viendo un video en TEDx, descubro arduino.</p>
+          </div>
         </ParallaxLayer>
         <ParallaxLayer
           sticky={{ start: 0.42, end: 1 }}
           // offset={0.42}
           speed={0} factor={1} >
+          <div className='boxtv' style={{ 'left': `calc(${w}px - (${w}px - (${w}px * (123/250))  + 218px))` }}>
           <img className='backgroundTV' src={quebrada} />
+          </div>
+          
         </ParallaxLayer>
         {/* 
         <ParallaxLayer

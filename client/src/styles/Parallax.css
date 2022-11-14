@@ -6,7 +6,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
-
 }
 
 .h2P {
@@ -15,6 +14,18 @@
 
 .pgraf {
   font-size: 20px;
+}
+
+/* .boxtv {
+  background-color: bisque;
+} */
+
+.boxtv,
+.backgroundTV {
+  width: 446px;
+  height: 327px;
+  position: absolute;
+  top: 1vw;
 }
 
 .h2P,
@@ -26,20 +37,13 @@
     0.04em 0.04em 0 #000,
     0.04em -0.04em 0 #000,
     -0.04em -0.04em 0 #000;
-  /* padding: 1vw 36vw 0vw 37vw; */
-  /* padding: 1vw 36vw 0vw calc(37vw); */
-  /* 1000px */
-  /* padding: 1vw 29vw 0vw calc(29vw + 1vw); */
-  padding-top: 1vw;
-  padding-left: attr(data-author px);
-  /* padding-left: 30ch; */
-  padding-right: 36vw;
 
+  padding: 4vw 1.5vw 0vw 4.5vw;
 
 }
 
 .pgraf::before {
-  content: attr(data-author);
+  content: attr(data_author);
   font-size: 20px;
   color: #444;
 }
@@ -48,11 +52,7 @@
   width: 100%;
 }
 
-.backgroundTV {
-  width: 450px;
-  height: 302px;
-  padding: 1vw 0 0 35vw;
-}
+
 
 @media screen and (max-width: 500px) {
 
@@ -64,16 +64,11 @@
     font-size: 18px;
   }
 
-  .h2P,
-  .pgraf {
-    padding: 7vw 11vw 0vw 11vw;
-  }
-
+  .boxtv,
   .backgroundTV {
-    width: 430px;
-    height: 294px;
-    padding: 5vw 0vw 0vw 9vw;
-
+    width: 446px;
+    height: 327px;
+    top: 1vw;
   }
 
 }
