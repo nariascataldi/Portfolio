@@ -19,6 +19,7 @@ var altQuebrada = 'Quebrada de cafayate - foto de Omar Zangrandi';
 var altCohete01 = 'Plataforma con un Cohete - Veritasium Por qué la Gravedad NO es una Fuerza';
 var altArduino = 'Icono de Arduino';
 var altRobot = 'Robot rojo con alas y led';
+var altBrazo = 'Brazo mecánico que toma un objeto con instrucciones de arduino';
 // var url = 'https://youtu.be/B9XbDS0Yuoc';
 
 export const Arduino01 = () => {
@@ -82,7 +83,7 @@ export const Arduino01 = () => {
           speed={40} factor={1} >
           <div className='boxtv' style={{ 'left': `calc(${w}px - (${w}px - (${w}px * (123/250))  + 218px))` }}>
           
-          <img className='iconoSkin' src={brazo} alt={altArduino} />
+          <img className='imgBrazo' src={brazo} alt={altBrazo} />
 
           </div>
         </ParallaxLayer>
