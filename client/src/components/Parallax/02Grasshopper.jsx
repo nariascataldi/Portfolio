@@ -6,7 +6,7 @@ import arduinoide from '../../assets/sking/arduinoide.png';
 import '../../styles/Parallax.css'
 
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import { B } from './const';
+import { PAGE_B } from './const';
 
 
 export const Grasshoper02 = () => {
@@ -14,7 +14,7 @@ export const Grasshoper02 = () => {
 
   return (
     <div className='bodyP'>
-      <Parallax pages={B} ref={ref} style={{
+      <Parallax pages={PAGE_B} ref={ref} style={{
         backgroundColor: 'black'
       }} horizontal={false}>
         <ParallaxLayer
