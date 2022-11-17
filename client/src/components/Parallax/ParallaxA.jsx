@@ -2,6 +2,10 @@ import '../../styles/Parallax.css'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { TOTAL, i02, i03, i04 } from './const';
 //para las particulas hay que traer el código y cambiar el objeto por start y space
+import { useCallback } from "react";
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
+
 
 // Background
 import family from '../../assets/image/parallax/family-watch-tv.png';
@@ -32,11 +36,10 @@ import bookUsers_JavaScript from '../../assets/books/Users_JavaScript.png';
 import bookObject_Oriented from '../../assets/books/Object_Oriented.png';
 import bookPatterns from '../../assets/books/Patterns.png';
 
-
 import { useRef } from 'react';
+import { ParticlesSpace } from '../ParticlesSpace';
 
 const END = TOTAL - 1;
-
 const henrySkin = [
   skinJavaScript,
   skinHTML,
@@ -56,7 +59,6 @@ const book = [
   bookPatterns
 ]
 // alt
-
 const altImg = {
   quebrada: 'Quebrada de cafayate - foto de Omar Zangrandi',
   cohete01: 'Plataforma con un Cohete - Veritasium Por qué la Gravedad NO es una Fuerza',
@@ -85,7 +87,140 @@ const altSkin = {
   gra: 'Icono de Saltamontes verde'
 };
 
-export const ParallaxA = () => {
+export const ParallaxA = (props) => {
+  const particlesInit = useCallback(async engine => {
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async container => {
+    await container;
+  }, []);
+  const star =
+  {
+    background: {
+      color: {
+        value: "black",
+      },
+    },
+    fullScreen: {
+      zIndex: -1,
+    },
+    fpsLimit: 10,
+    particles: {
+      color: {
+        value: "#ffffff"
+      },
+      collisions: {
+        enable: false,
+      },
+      "move": {
+        "enable": true,
+        "speed": 0.03,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      },
+      number: {
+        density: {
+          enable: true,
+          area: 50,
+        },
+        value: 100,
+      },
+      opacity: {
+        value: 0.6,
+        "anim": {
+          "enable": true,
+          "speed": 0.05,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      shape: {
+        type: ['circle'],
+      },
+      size: {
+        value: { min: 0.1, max: 3 },
+        "anim": {
+          "enable": true,
+          "speed": 1,
+          "size_min": 0.1,
+          "sync": false
+        }
+
+      },
+    },
+    detectRetina: true,
+  }
+  const space = {
+    background: {
+      color: {
+        value: "black",
+      },
+    },
+    fullScreen: {
+      zIndex: -1,
+    },
+    fpsLimit: 10,
+    particles: {
+      color: {
+        value: "#ffffff"
+      },
+      collisions: {
+        enable: false,
+      },
+      "move": {
+        "enable": true,
+        "speed": 2,
+        "direction": "left",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      },
+      number: {
+        density: {
+          enable: true,
+          area: 50,
+        },
+        value: 100,
+      },
+      opacity: {
+        value: 0.6,
+        "anim": {
+          "enable": true,
+          "speed": 3,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      shape: {
+        type: "circle",
+      },
+      size: {
+        value: { min: 0.1, max: 3 },
+        "anim": {
+          "enable": true,
+          "speed": 4,
+          "size_min": 0.1,
+          "sync": false
+        }
+
+      },
+    },
+    detectRetina: true,
+  }
+
   const ref = useRef();
   var w = window.innerWidth;
   var h = window.innerHeight;
@@ -215,10 +350,15 @@ export const ParallaxA = () => {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          sticky={{ start: i03 + 0.3, end: i03 + 1 }}
+          sticky={{ start: i03 + 0.15, end: i03 + 0.81 }}
         >
           <div className='boxtv' style={{ 'left': `calc(${w ?? w}px - (${w ?? w}px - (${w ?? w}px * (123/250))  + 218px))` }}>
-            <ParticlesSpace />
+            <Particles
+              id={'pSpace'}
+              init={particlesInit}
+              options={space}
+              loaded={particlesLoaded}
+            />
             <img src={coheteEnc03} className='backgroundTV' alt='despegue' />
           </div>
         </ParallaxLayer>
@@ -253,7 +393,12 @@ export const ParallaxA = () => {
           sticky={{ start: i04 + 0, end: i04 + 1 }}
         >
           <div className='boxtv' style={{ 'left': `calc(${w ?? w}px - (${w ?? w}px - (${w ?? w}px * (123/250))  + 218px))` }}>
-            <ParticlesStar />
+            <Particles
+              id={'pStar'}
+              init={particlesInit}
+              options={star}
+              loaded={particlesLoaded}
+            />
           </div>
         </ParallaxLayer>
         <ParallaxLayer
