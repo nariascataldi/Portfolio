@@ -69,17 +69,79 @@
   opacity: 50%;
 }
 
+.grass {
+  width: 50px;
+  opacity: 50%;
+  position: relative;
+  top: 80px;
+  left: 10px;
+}
+
+.booksBox {
+  width: 440px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  /* background-color: white; */
+}
+.skinBox{
+  width: 440px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  /* background-color: white; */
+}
+
+.skin {
+  width: 80px;
+  padding: 10px;
+  animation: rollSkin 5s 1;
+  transform: rotate(0deg);
+}
+.skin:hover{
+  background-color: gold;
+}
+.book {
+  width: 80px;
+  padding: 10px;
+  animation: roll 5s 1;
+  transform: rotate(0deg);
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+    width: 0px;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    width: 80px;
+  }
+}
+@keyframes rollSkin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 .imgBrazo {
   width: 450px;
   height: 320px;
-  /* position: absolute; */
-  /* bottom: 15px;
-  left: 15px; */
   opacity: 100%;
 }
 
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
 
   .h2P {
     font-size: 23px;
@@ -96,4 +158,4 @@
     top: 1vw;
   }
 
-}
+} */

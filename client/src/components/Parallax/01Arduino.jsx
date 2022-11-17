@@ -1,26 +1,21 @@
 import { useRef } from 'react';
-import { PAGE_A } from './const';
+import { PAGE_01 } from './const';
 import family from '../../assets/image/parallax/family-watch-tv.png';
 import quebrada from '../../assets/image/parallax/Paisaje-Quebrada-de-Cafayate-a-Salta-Argentina-4.jpg';
 import cohete01 from '../../assets/image/parallax/cohete01.png';
 import arduinoide from '../../assets/sking/arduinoide.png';
 import robot from '../../assets/image/parallax/robot.png';
 import brazo from '../../assets/image/parallax/brazo.gif';
-
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-// import React from 'react'
-// import ReactPlayer from 'react-player/youtube'
-
 
 import '../../styles/Parallax.css'
 
-
+const END = PAGE_01 - 1;
 var altQuebrada = 'Quebrada de cafayate - foto de Omar Zangrandi';
 var altCohete01 = 'Plataforma con un Cohete - Veritasium Por qué la Gravedad NO es una Fuerza';
 var altArduino = 'Icono de Arduino';
-var altRobot = 'Robot rojo con alas y led';
-var altBrazo = 'Brazo mecánico que toma un objeto con instrucciones de arduino';
-// var url = 'https://youtu.be/B9XbDS0Yuoc';
+var altRobot = 'Robot rojo con alas y led. Jugete de cartón';
+var altBrazo = 'Brazo mecánico que toma un objeto con instrucciones de arduino - IITA Salta';
 
 export const Arduino01 = () => {
   const ref = useRef();
@@ -28,12 +23,10 @@ export const Arduino01 = () => {
 
   return (
     <div className='bodyP'>
-      <Parallax pages={PAGE_A | 3} ref={ref} style={{
+      <Parallax pages={PAGE_01 | 3} ref={ref} style={{
         backgroundColor: 'black'
       }} horizontal={false}>
         {/* Arduino */}
-
-
         <ParallaxLayer offset={0} style={{ color: 'white', }} >
           <div className='boxtv' style={{ 'left': `calc(${w ?? w}px - (${w ?? w}px - (${w ?? w}px * (123/250))  + 218px))` }}>
 
@@ -102,7 +95,7 @@ export const Arduino01 = () => {
 
         <ParallaxLayer
           // offset={0}
-          sticky={{ start: 0, end: 2 }}
+          sticky={{ start: 0, end: `${END}` }}
           speed={0} factor={1} style={{ backgroundImage: `url(${family})`, backgroundPosition: '50% 50%', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', width: '100vw' }} />
       </Parallax>
     </div>

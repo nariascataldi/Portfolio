@@ -3,6 +3,7 @@ import Particles from "react-particles";
 import { Link } from "react-router-dom";
 import { loadFull } from "tsparticles";
 import imgNotFound from '../assets/image/404.jpg';
+import '../styles/NotFound.css'
 
 export const NotFound = () => {
   const particlesInit = useCallback(async engine => {
@@ -85,18 +86,15 @@ export const NotFound = () => {
       },
       detectRetina: true,
     }
-
   }, [])
+  
   return (
     <>
-        <div style={{
-          width: '100vw', height: '100vh', display: 'flex', alignItems: 'center'
-        }}>
-          <Link to="/" >
-            {/* <p style={{ padding: '0 0 0 2vw' }}>Home</p> */}
-            <img style={{ height: '90vh', padding: '0 20vw 0 20vw' }} src={imgNotFound} alt="notFoundPage" />
-          </Link>
-        </div>
+      <div className="boxNotFound">
+        <Link to="/" >
+          <img className="notFound" src={imgNotFound} alt="notFoundPage" />
+        </Link>
+      </div>
       <Particles init={particlesInit} options={options}>
       </Particles>
     </>
