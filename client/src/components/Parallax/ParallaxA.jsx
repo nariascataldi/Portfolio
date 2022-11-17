@@ -37,7 +37,7 @@ import bookObject_Oriented from '../../assets/books/Object_Oriented.png';
 import bookPatterns from '../../assets/books/Patterns.png';
 
 import { useRef } from 'react';
-import { ParticlesSpace } from '../ParticlesSpace';
+
 
 const END = TOTAL - 1;
 const henrySkin = [
@@ -350,7 +350,7 @@ export const ParallaxA = (props) => {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          sticky={{ start: i03 + 0.15, end: i03 + 0.81 }}
+          sticky={{ start: i03 + 0.25, end: i03 + 0.61 }}
         >
           <div className='boxtv' style={{ 'left': `calc(${w ?? w}px - (${w ?? w}px - (${w ?? w}px * (123/250))  + 218px))` }}>
             <Particles
@@ -390,7 +390,7 @@ export const ParallaxA = (props) => {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          sticky={{ start: i04 + 0, end: i04 + 1 }}
+          sticky={{ start: i04 + 0, end: `${END}` }}
         >
           <div className='boxtv' style={{ 'left': `calc(${w ?? w}px - (${w ?? w}px - (${w ?? w}px * (123/250))  + 218px))` }}>
             <Particles
@@ -402,7 +402,7 @@ export const ParallaxA = (props) => {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          sticky={{ start: i04 + 0.3, end: i04 + 1 }}
+          sticky={{ start: i04 + 0.3, end: `${END}` }}
         >
           <div className='boxtv' style={{ 'left': `calc(${w ?? w}px - (${w ?? w}px - (${w ?? w}px * (123/250))  + 218px))` }}>
             <img src={bandera} className='backgroundTV' alt='despegue' />
