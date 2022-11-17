@@ -25,7 +25,7 @@
   width: 446px;
   height: 327px;
   position: absolute;
-  top: 1vw;
+  top: 10px;
 }
 
 .h2P,
@@ -37,8 +37,9 @@
     0.04em 0.04em 0 #000,
     0.04em -0.04em 0 #000,
     -0.04em -0.04em 0 #000;
-
+  /* background-color: aliceblue; */
   padding: 4vw 1.5vw 0vw 4.5vw;
+  /* padding: 10px 10px 0 20px; */
 
 }
 
@@ -85,7 +86,8 @@
   align-items: flex-end;
   /* background-color: white; */
 }
-.skinBox{
+
+.skinBox {
   width: 440px;
   display: flex;
   flex-direction: row;
@@ -102,27 +104,29 @@
   animation: rollSkin 5s 1;
   transform: rotate(0deg);
 }
-.skin:hover{
-  background-color: gold;
-}
+
 .book {
   width: 80px;
   padding: 10px;
-  animation: roll 5s 1;
+  animation: rollBook 10s 1;
   transform: rotate(0deg);
 }
 
-@keyframes roll {
+@keyframes rollBook {
   0% {
     transform: rotate(0);
     width: 0px;
   }
 
-  100% {
+  50% {
     transform: rotate(360deg);
+  }
+  
+  100% {
     width: 80px;
   }
 }
+
 @keyframes rollSkin {
   0% {
     transform: rotate(0);

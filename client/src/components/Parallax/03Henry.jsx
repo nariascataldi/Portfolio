@@ -24,7 +24,7 @@ const END = PAGE_03 - 1;
 
 
 export const Henry03 = () => {
-  const skin = [
+  const henrySkin = [
     skinJavaScript,
     skinHTML,
     skinCSS,
@@ -36,7 +36,7 @@ export const Henry03 = () => {
     skinGit,
     skinHenry
   ];
-  const altskin = {
+  const altSkin = {
     jav: 'Icono de JavaScript - cuadrado amarillo con letras JS',
     htm: 'Icono de HTML - contorno naranja de 5',
     css: 'Icono de CSS - contorno azul 3',
@@ -75,8 +75,8 @@ export const Henry03 = () => {
         >
           <div className='boxtv' style={{ 'left': `calc(${w ?? w}px - (${w ?? w}px - (${w ?? w}px * (123/250))  + 218px))` }}>
             <div className='skinBox'>
-              {skin.map(s =>
-                <img className='skin' src={s} alt={altskin[`${s.slice(14, 17)}`]} title={`${s.slice(14, 17)}`} />)
+              {henrySkin.map(s =>
+                <img className='skin' src={s} alt={altSkin[`${s.slice(14, 17)}`]} title={`${s.slice(14, 17)}`} />)
               }
 
             </div>

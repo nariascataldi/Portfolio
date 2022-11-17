@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 
-export const ParticlesSpace = (props) => {
+export const ParticlesStar = (props) => {
 
   const particlesInit = useCallback(async engine => {
     await loadFull(engine);
@@ -32,8 +32,8 @@ export const ParticlesSpace = (props) => {
       },
       "move": {
         "enable": true,
-        "speed": 2,
-        "direction": "left",
+        "speed": 0.03,
+        "direction": "none",
         "random": false,
         "straight": false,
         "out_mode": "out",
@@ -54,19 +54,19 @@ export const ParticlesSpace = (props) => {
         value: 0.6,
         "anim": {
           "enable": true,
-          "speed": 3,
+          "speed": 0.05,
           "opacity_min": 0.1,
           "sync": false
         }
       },
       shape: {
-        type: "circle",
+        type: ['circle'],
       },
       size: {
         value: { min: 0.1, max: 3 },
         "anim": {
           "enable": true,
-          "speed": 4,
+          "speed": 1,
           "size_min": 0.1,
           "sync": false
         }
