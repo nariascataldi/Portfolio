@@ -1,12 +1,9 @@
 import '../../styles/Parallax.css'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import { TOTAL, i02, i03, i04 } from './const';
-//para las particulas hay que traer el código y cambiar el objeto por start y space
-import { useCallback } from "react";
+import { TOTAL, i01, i02, i03, i04 } from './const';
 import Particles from "react-particles";
+import { useCallback, useRef } from "react";
 import { loadFull } from "tsparticles";
-
-
 // Background
 import family from '../../assets/image/parallax/family-watch-tv.png';
 import quebrada from '../../assets/image/parallax/Paisaje-Quebrada-de-Cafayate-a-Salta-Argentina-4.jpg';
@@ -17,7 +14,6 @@ import brazo from '../../assets/image/parallax/brazo.gif';
 import cohete02 from '../../assets/image/parallax/cohete02.png';
 import bandera from '../../assets/image/parallax/banderaLuna.png';
 import coheteEnc03 from '../../assets/image/parallax/coheteEnc03.gif';
-
 // Skin
 import grasshopper from '../../assets/sking/grasshopper.png';
 import skinJavaScript from '../../assets/sking/javascript.png';
@@ -35,8 +31,7 @@ import bookJavaKids from '../../assets/books/JavaScript_for_kids.png';
 import bookUsers_JavaScript from '../../assets/books/Users_JavaScript.png';
 import bookObject_Oriented from '../../assets/books/Object_Oriented.png';
 import bookPatterns from '../../assets/books/Patterns.png';
-
-import { useRef } from 'react';
+import LandingPage from '../LandingPage';
 
 
 const END = TOTAL - 1;
@@ -87,11 +82,10 @@ const altSkin = {
   gra: 'Icono de Saltamontes verde'
 };
 
-export const ParallaxA = (props) => {
+export const ParallaxA = () => {
   const particlesInit = useCallback(async engine => {
     await loadFull(engine);
   }, []);
-
   const particlesLoaded = useCallback(async container => {
     await container;
   }, []);
@@ -220,18 +214,20 @@ export const ParallaxA = (props) => {
     },
     detectRetina: true,
   }
-
   const ref = useRef();
   var w = window.innerWidth;
   var h = window.innerHeight;
-  console.log({ w }, { h });
+  // console.log({ w }, { h });
   if ((h / w) >= 1.65 || h >= 600) {
     return (
       <Parallax pages={TOTAL | 9} ref={ref} style={{
         backgroundColor: 'black',
       }} horizontal={false} >
-        {/* Arduino i=0->0 f=2->2*/}
         <ParallaxLayer offset={0} style={{ color: 'white', }} >
+          <LandingPage />
+        </ParallaxLayer>
+        {/* Arduino i=0->0 f=2->2*/}
+        <ParallaxLayer offset={i01 + 0} style={{ color: 'white', }} >
           <div className='boxtv' style={{ 'left': `calc(${w ?? w}px - (${w ?? w}px - (${w ?? w}px * (123/250))  + 218px))` }}>
 
             <p className='pgraf' data_author={`${w}px`} >Querida comunidad:</p>
@@ -239,7 +235,7 @@ export const ParallaxA = (props) => {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          sticky={{ start: 0.42, end: 1.55 }}
+          sticky={{ start: i01 + 0.42, end: i01 + 1.55 }}
           // offset={0.42}
           speed={1} factor={1} >
           <div className='boxtv' style={{ 'left': `calc(${w}px - (${w}px - (${w}px * (123/250))  + 218px))` }}>
@@ -248,7 +244,7 @@ export const ParallaxA = (props) => {
 
         </ParallaxLayer>
         <ParallaxLayer
-          sticky={{ start: 0.5, end: 1.55 }}
+          sticky={{ start: i01 + 0.5, end: i01 + 1.55 }}
           // offset={0.42}
           speed={1} factor={1} >
           <div className='boxtv' style={{ 'left': `calc(${w}px - (${w}px - (${w}px * (123/250))  + 218px))` }}>
@@ -257,7 +253,7 @@ export const ParallaxA = (props) => {
 
         </ParallaxLayer>
         <ParallaxLayer
-          sticky={{ start: 0.9, end: 0.9 }}
+          sticky={{ start: i01 + 0.9, end: i01 + 0.9 }}
           // offset={0.42}
           speed={0.5} factor={1} >
           <div className='boxtv' style={{ 'left': `calc(${w}px - (${w}px - (${w}px * (123/250))  + 218px))` }}>
@@ -265,7 +261,7 @@ export const ParallaxA = (props) => {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          sticky={{ start: 0.95, end: 1 }}
+          sticky={{ start: i01 + 0.95, end: i01 + 1 }}
           // offset={0.42}
           speed={40} factor={1} >
           <div className='boxtv' style={{ 'left': `calc(${w}px - (${w}px - (${w}px * (123/250))  + 218px))` }}>
@@ -274,7 +270,7 @@ export const ParallaxA = (props) => {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          sticky={{ start: 1.6, end: 1.6 }}
+          sticky={{ start: i01 + 1.6, end: i01 + 1.6 }}
           // offset={0.42}
           speed={40} factor={1} >
           <div className='boxtv' style={{ 'left': `calc(${w}px - (${w}px - (${w}px * (123/250))  + 218px))` }}>
@@ -284,7 +280,7 @@ export const ParallaxA = (props) => {
           </div>
         </ParallaxLayer>
         <ParallaxLayer
-          sticky={{ start: 0.95, end: 1 }}
+          sticky={{ start: i01 + 0.95, end: i01 + 1 }}
           // offset={0.42}
           speed={1} factor={1} >
           <div className='boxtv' style={{ 'left': `calc(${w}px - (${w}px - (${w}px * (123/250))  + 218px))` }}>
@@ -343,7 +339,7 @@ export const ParallaxA = (props) => {
           </div>
         </ParallaxLayer>
         {/* Henry i=0->3.4 f=1->4.4*/}
-        <ParallaxLayer offset={i03 + 0 | 3.4} style={{ color: 'white', }} >
+        <ParallaxLayer offset={i03 + 0} style={{ color: 'white', }} >
           <div className='boxtv' style={{ 'left': `calc(${w ?? w}px - (${w ?? w}px - (${w ?? w}px * (123/250))  + 218px))` }}>
             <p className='pgraf'>Apruebo el Challenger. Agradezco a mi mujer e hijos, que me bancaron para estudiar full stack developer.
             </p>
@@ -383,7 +379,7 @@ export const ParallaxA = (props) => {
           </div>
         </ParallaxLayer>
         {/* Final i=0-> f= ->*/}
-        <ParallaxLayer offset={i04 + 0 | 5.4} style={{ color: 'white', }} >
+        <ParallaxLayer offset={i04 - 0.3 } style={{ color: 'white', }} >
           <div className='boxtv' style={{ 'left': `calc(${w ?? w}px - (${w ?? w}px - (${w ?? w}px * (123/250))  + 218px))` }}>
             <p className='pgraf'>El tiempo apremia y este bootcamp no da tregua. Gracias a Dios, lo logré. 🚀
             </p>
@@ -410,7 +406,7 @@ export const ParallaxA = (props) => {
         </ParallaxLayer>
 
         <ParallaxLayer
-          sticky={{ start: 0, end: `${END}` }}
+          sticky={{ start: i01 + 0, end: `${END}` }}
           speed={0} factor={1} style={{ backgroundImage: `url(${family})`, backgroundPosition: '50% 50%', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', width: '100vw', height: '100vh' }} />
       </Parallax>
     )

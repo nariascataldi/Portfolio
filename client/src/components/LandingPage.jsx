@@ -6,15 +6,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ParticlesContainer } from './Particles';
 
 
-
-
-
 function LandingPage() {
   // const navigate = useNavigate();
-  
+
   const toastId = React.useRef(null);
   const notify = () => {
-    if(! toast.isActive(toastId.current)) {
+    if (!toast.isActive(toastId.current)) {
       toastId.current = toast("scroll");
     }
   }
@@ -83,6 +80,7 @@ function LandingPage() {
             </tbody>
           </table>
         </div>
+
       </div>
       <ToastContainer
         position="top-right"
@@ -96,7 +94,7 @@ function LandingPage() {
         draggable
         pauseOnHover={false}
         theme="light"
-      />      
+      />
     </>
   );
 }
