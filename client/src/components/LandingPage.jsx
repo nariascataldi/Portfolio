@@ -1,20 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Typewriter from 'typewriter-effect';
-import { ToastContainer, toast } from 'react-toastify';
 import '../styles/LandingPage.css';
-import 'react-toastify/dist/ReactToastify.css';
 import { ParticlesContainer } from './Particles';
 
 
 function LandingPage() {
-  // const navigate = useNavigate();
-
-  const toastId = React.useRef(null);
-  const notify = () => {
-    if (!toast.isActive(toastId.current)) {
-      toastId.current = toast("scroll");
-    }
-  }
+  const [scroll, setScroll] = useState(false)
 
   return (
     <>
@@ -44,8 +35,8 @@ function LandingPage() {
                         .pauseFor(1500)
                         .deleteChars(40)
                         .typeString('〈 h2 〉Full Stack Developer〈 /h2 〉')
-                        .pauseFor(5000)
-                        .callFunction(notify)
+                        .pauseFor(2000)
+                        .callFunction(setScroll)
                         .start()
                         ;
                     }}
@@ -80,21 +71,10 @@ function LandingPage() {
             </tbody>
           </table>
         </div>
-
+        {!scroll ? <></> : 
+        <div className='scrollC'><span className='scroll' ></span>Scroll</div> }
       </div>
-      <ToastContainer
-        position="top-right"
-        autoClose={2000}
-        limit={1}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover={false}
-        theme="light"
-      />
+
     </>
   );
 }

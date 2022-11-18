@@ -1,3 +1,7 @@
+:root {
+  --scroll-color: orange
+}
+
 .html {
   color: orangered;
   text-align: left;
@@ -40,6 +44,109 @@
 .tableBody {
   vertical-align: initial;
 }
+
+.styleTheme {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 1px 10px 0px 0px;
+  font-size: x-large;
+  cursor: pointer;
+}
+
+/* scroll */
+.scrollC {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  padding-top: 70px;
+  color: var(--scroll-color);
+}
+
+.scrollC .scroll {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 30px;
+  height: 50px;
+  margin-left: -15px;
+  border: 2px solid var(--scroll-color);
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+
+.scrollC .scroll::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: var(--scroll-color);
+  border-radius: 100%;
+  -webkit-animation: sdb 2s infinite;
+  animation: sdb 2s infinite;
+  box-sizing: border-box;
+}
+
+.scrollC .scroll::after {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  content: '';
+  margin-left: -9px;
+  border-left: 1px solid var(--scroll-color);
+  border-bottom: 1px solid var(--scroll-color);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sdb {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ------- */
+
 /* Pantallas de menos de 500px de ancho */
 @media screen and (max-width: 500px) {
   .container {
@@ -49,6 +156,7 @@
     width: 80vw;
     height: 80vh;
   }
+
   .table {
     height: 35vh;
     width: 80vw;

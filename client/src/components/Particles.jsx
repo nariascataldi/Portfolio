@@ -3,8 +3,8 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 
 export const ParticlesContainer = (props) => {
-  const [dark, setDark] = useState(false);
 
+  const [theme, setTheme] = useState(false);
   const particlesInit = useCallback(async engine => {
     await loadFull(engine);
   }, []);
@@ -47,7 +47,7 @@ export const ParticlesContainer = (props) => {
     },
     particles: {
       color: {
-        value: dark ? "#000000" : "#ffffff"
+        value: theme ? "#000000" : "#ffffff"
       },
       links: {
         color: "#ffffff",
@@ -89,9 +89,9 @@ export const ParticlesContainer = (props) => {
     detectRetina: true,
   }
 
-  function handleLightDark(e) {
+  function handleTheme(e) {
     e.preventDefault()
-    setDark(!dark)
+    setTheme(!theme)
   }
   return (
     <>
@@ -101,7 +101,7 @@ export const ParticlesContainer = (props) => {
         options={options}
         loaded={particlesLoaded}
       />
-      <button onClick={e => { handleLightDark(e) }}>{dark ? 'dark' : 'light'}</button>
+      <span className='styleTheme' onClick={e => { handleTheme(e) }}>{theme ? '🌙' : '☀️'}</span>
 
     </>
 
