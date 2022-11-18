@@ -101,14 +101,14 @@
 .skin {
   width: 80px;
   padding: 10px;
-  animation: rollSkin 15s 4;
+  animation: rollSkin 15s 5;
   transform: rotate(0deg);
 }
 
 .book {
   width: 80px;
   padding: 10px;
-  animation: rollBook 10s 1;
+  animation: rollBook 10s 3;
   transform: rotate(0deg);
 }
 
