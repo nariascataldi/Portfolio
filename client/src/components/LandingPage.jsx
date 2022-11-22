@@ -35,7 +35,7 @@ function LandingPage() {
                         .pauseFor(1500)
                         .deleteChars(40)
                         .typeString('〈 h2 〉Full Stack Developer〈 /h2 〉')
-                        .pauseFor(2000)
+                        .pauseFor(500)
                         .callFunction(setScroll)
                         .start()
                         ;
