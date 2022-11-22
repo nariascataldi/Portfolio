@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from './app/store';
 
-import { ReactInit } from './components/reactInit/ReactInit';
-import { LandingPage } from "./components/LandingPage";
-import { ProyectList } from "./components/ProyectList";
+import ReactInit from './components/reactInit/ReactInit';
+import LandingPage from "./components/LandingPage";
+import ProyectList from "./components/ProyectList";
 import { ParticlesContainer } from "./components/Particles";
 import { ParallaxCat } from "./components/Parallax";
 import { NotFound } from "./components/NotFound";
@@ -38,7 +38,7 @@ function App() {
 
 
         </Routes>
-
+        
       </Provider>
     </BrowserRouter>
   );
