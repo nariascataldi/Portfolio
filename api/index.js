@@ -1,6 +1,6 @@
 const server = require('./src/app.js');
 const { conn, User, Mail, Proyect } = require('./src/db.js');
-const PORT = 3001;
+const port = process.env.PORT || 3001;
 
 const jsonUser = require('./src/utils/Data/user.json');
 const jsonMail = require('./src/utils/Data/mail.json');
@@ -45,8 +45,8 @@ const pushProyect = () => {
     pushMail();
     pushProyect();
 
-    server.listen(PORT, () => {
-      console.log(`Listening at ${PORT} `); // eslint-disable-line no-console
+    server.listen(port, () => {
+      console.log(`Listening at ${port} `); // eslint-disable-line no-console
     });
   })
 })();
