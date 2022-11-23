@@ -11,7 +11,9 @@ body {
 .img_perro2{
   background-image: url(https://images.pexels.com/photos/7296954/pexels-photo-7296954.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
 }
-
+.family_tv{
+  background-image: url('../assets/image/parallax/family-watch-tv.png');
+}
 /*Estilos parallax*/
 .container {
   height: 100vh;
@@ -30,11 +32,17 @@ section {
 }
 
 .parallax-bg {
+  height: 50vh;
+}
+.parallax-bgF {
+  height: 50vh;
+}
+.parallax-bg, 
+.parallax-bgF {
   background-position: center center;
   transform: translateZ(-0.5px) scale(2);
   background-size: cover;
   z-index: -1;
-  height: 50vh;
 }
 
 .parallax-content {
