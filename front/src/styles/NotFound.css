@@ -1,0 +1,11 @@
+.boxNotFound {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+.notFound {
+  width: 50%;
+}

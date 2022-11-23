@@ -2,7 +2,7 @@ import { useCallback, useMemo } from "react";
 import Particles from "react-particles";
 import { Link } from "react-router-dom";
 import { loadFull } from "tsparticles";
-import imgNotFound from '../assets/image/404.jpg';
+import imgNotFound from '../assets/image/404.png';
 import '../styles/NotFound.css'
 
 export const NotFound = () => {
