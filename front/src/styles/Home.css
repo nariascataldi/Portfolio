@@ -5,15 +5,23 @@ body {
   background-color: gray;
   font-family: sans-serif;
 }
-.img_perro1{
+
+.img_perro1 {
   background-image: url(https://images.pexels.com/photos/1378849/pexels-photo-1378849.jpeg?auto=compress&cs=tinysrgb&w=1600);
 }
-.img_perro2{
+
+.img_perro2 {
   background-image: url(https://images.pexels.com/photos/7296954/pexels-photo-7296954.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
 }
-.family_tv{
-  background-image: url('../assets/image/parallax/family-watch-tv.png');
+
+.family_tv {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  image-rendering: optimizeSpeed;
+  image-orientation: initial;
 }
+
 /*Estilos parallax*/
 .container {
   height: 100vh;
@@ -30,15 +38,22 @@ section {
   align-items: center;
   justify-content: center;
 }
-
+.tv{
+  background-color: aqua;
+  height: 50px;
+  width: 360px;
+  position: absolute;
+  left: 25px;
+}
 .parallax-bg {
   height: 50vh;
 }
+
 .parallax-bgF {
   height: 50vh;
 }
-.parallax-bg, 
-.parallax-bgF {
+
+.parallax-bg {
   background-position: center center;
   transform: translateZ(-0.5px) scale(2);
   background-size: cover;
